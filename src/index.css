@@ -1,3 +1,16 @@
 body {
-  background-color: lightgrey;
+  background-color: white;
+}
+div, form {
+  text-align: center;
+  margin: 0 auto;
+  color: #FF5941;
+}
+.welcome {
+  font-size: 60px;
+}
+
+.inputArea {
+  user-select: none;
+  margin-bottom: 10px;
 }
