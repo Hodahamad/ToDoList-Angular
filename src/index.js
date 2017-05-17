@@ -37,12 +37,12 @@ function($scope, $http) {
       }
     )
   };
-
-  $scope.removeAttribute = function () {
-    var element = angular.element(document.querySelector('.inputArea'));
-    element.attr('readonly', false);
+  $scope.editTodo = function(todo) {
+    $http.put(baseUrl + '/todos/' + todo.id + '.json', {todo: {status: todo.status}})
+    .then(function(success) {
+      console.log(success)
+    }, function (error) {
+      console.log(error)
+    });
   }
-    // $scope.editTodo = function {
-    //
-    // }
 });

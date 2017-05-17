@@ -25,9 +25,10 @@
       {{test}}
     </div>
     <div ng-repeat = "todo in todos">
-      <input type="text" ng-model="todo.description" class="inputArea" readonly ng-dblclick="removeAttribute()">
 
-      <input type="checkbox">
+      <span>{{todo.description}} </span>
+
+      <input type="checkbox" ng-change="editTodo(todo)" ng-model="todo.status">
       <button ng-click="deleteTodo(todo)"type="button" id="delete">Delete</button>
     </div>
     <br>
